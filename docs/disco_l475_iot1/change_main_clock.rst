@@ -29,8 +29,8 @@ Process
 
 #. Take note of the PLLM, PLLN, PLL/R, PLL/Q and PLL/P parameters which you setup to get the desired clock
 #. Update your projects ``prj.conf`` to contain the following
-
-    .. code-block::
+    
+    .. code-block:: text
 
         CONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC=<CLOCK IN HZ>
 
@@ -42,7 +42,7 @@ Process
 
     For example for 64 MHz you would have
 
-    .. code-block::
+    .. code-block:: text
 
         CONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC=64000000
 
