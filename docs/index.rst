@@ -9,7 +9,7 @@ This site will be used to document how to use specific parts of the Zephyr RTOS.
    with the Zephyr RTOS, and by no means is complete
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 1
    :titlesonly:
 
    particle_argon/index
