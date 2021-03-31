@@ -1,20 +1,18 @@
-.. Zephyr Driver Documentation documentation master file, created by
-   sphinx-quickstart on Wed Mar 31 14:57:29 2021.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Zephyr Driver Documentation
+===========================
 
-Welcome to Zephyr Driver Documentation's documentation!
-=======================================================
+
+This site will be used to document how to use specific parts of the Zephyr RTOS. This will include board specific quirks with device drivers that have been encountered.
+
+.. warning:: This documentation is simply here to provide documentation
+   on the device drivers that have been encountered through playing around
+   with the Zephyr RTOS, and by no means is complete
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Boards
+   :glob:
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   particle_argon/*
+   disco_l475_iot1/*
+   general/*
