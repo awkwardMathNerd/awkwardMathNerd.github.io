@@ -19,12 +19,12 @@ Process
 #. Open STM32CubeMX and create a new project for the STM32L475VG
 #. Click into the ``Clock Configuration`` tab, it should look as follows
 
-    .. image:: /_static/disco_l475_iot1/change_freq_1.png
+    .. image:: //_static/disco_l475_iot1/change_freq_1.png
         :width: 100%
 
 #. Change the parameters until you have your desired frequency (using HSI through PLL), for example to get a 64 MHz clock you would have the following Configuration
 
-    .. image:: /_static/disco_l475_iot1/change_freq_2.png
+    .. image:: //_static/disco_l475_iot1/change_freq_2.png
         :width: 100%
 
 #. Take note of the PLLM, PLLN, PLL/R, PLL/Q and PLL/P parameters which you setup to get the desired clock
@@ -51,3 +51,4 @@ Process
         CONFIG_CLOCK_STM32_PLL_P_DIVISOR=7
         CONFIG_CLOCK_STM32_PLL_Q_DIVISOR=2
         CONFIG_CLOCK_STM32_PLL_R_DIVISOR=2
+#. Rebuild the project
