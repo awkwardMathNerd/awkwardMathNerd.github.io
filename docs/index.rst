@@ -9,10 +9,9 @@ This site will be used to document how to use specific parts of the Zephyr RTOS.
    with the Zephyr RTOS, and by no means is complete
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Boards
-   :glob:
+   :maxdepth: 5
+   :titlesonly:
 
-   particle_argon/*
-   disco_l475_iot1/*
-   general/*
+   particle_argon/index
+   disco_l475_iot1/index
+   general/index
