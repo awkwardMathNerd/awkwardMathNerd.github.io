@@ -31,8 +31,8 @@ export SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct)
 ##############
  
 # build our documentation with sphinx (see docs/conf.py)
-#make -C docs clean
-#make -C docs html
+make -C docs clean
+make -C docs html
  
 #######################
 # Update GitHub Pages #
