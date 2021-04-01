@@ -1,5 +1,6 @@
+**************
 Particle Argon
-==============
+**************
 
 .. toctree::
     :titlesonly:

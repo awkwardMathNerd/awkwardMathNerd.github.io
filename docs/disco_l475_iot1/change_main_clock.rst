@@ -1,5 +1,6 @@
+*****************
 Change Main Clock
-=================
+*****************
 
 .. toctree::
     :hidden:
@@ -8,13 +9,13 @@ Change Main Clock
 This page will describe the process to configure the main clock of the Disco L475 IOT1 in Zephyr
 
 Software
-*****************
+========
 
 * STM32CubeMX, this is simply used to find the required parameters, this can be done with the datasheet but I was too lazy
 * Zephyr, duh
 
 Process
-*******
+=======
 
 #. Open STM32CubeMX and create a new project for the STM32L475VG
 #. Click into the ``Clock Configuration`` tab, it should look as follows

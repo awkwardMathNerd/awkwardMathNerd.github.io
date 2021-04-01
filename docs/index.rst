@@ -1,5 +1,6 @@
+***************************
 Zephyr Driver Documentation
-===========================
+***************************
 
 
 This site will be used to document how to use specific parts of the Zephyr RTOS. This will include board specific quirks with device drivers that have been encountered.
@@ -9,7 +10,7 @@ This site will be used to document how to use specific parts of the Zephyr RTOS.
    with the Zephyr RTOS, and by no means is complete
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 5
    :titlesonly:
 
    particle_argon/index

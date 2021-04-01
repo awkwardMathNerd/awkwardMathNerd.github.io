@@ -1,5 +1,6 @@
+***
 SPI
-===
+***
 
 .. toctree::
     :hidden:
@@ -8,11 +9,22 @@ SPI
 This page will talk about the SPI Zephyr device driver (low level), this information *should* be valid for all STM32 boards since they use the same driver code.
 
 Configuration
-#############
-**STILL POPULATING**
+=============
+This section contains all the different configuration options you can use with the STM32 SPI interface through the ``spi_config.operation`` field
+
+.. glossary::
+
+    SPI_OP_MODE_MASTER
+        Sets the operational mode to MASTER
+
+    SPI_OP_MODE_SLAVE
+        Sets the operational mode to SLAVE
+
+SPI_OP_MODE_MASTER
+    STUFF
 
 Frequency Selection
-###################
+===================
 The clock for the STM32 SPI peripheral is provided by the main clock through a prescaler, this prescaler can have a value of 2, 4, 8, 16, 32, 64, 128 and 256.
 You cannot directly set this prescaler in Zephyr, instead you are required to set the ``frequency`` field in your ``spi_config`` struct. 
 
@@ -23,15 +35,15 @@ trusting the ``frequency`` field since it can lead to pretty large mismatches in
 For full details on the prescaler selection algorithm see ``spi_stm32_configure`` in ``zephyr/drivers/spi/spi_ll_stm32.c``.
 
 Slave Mode
-##########
+==========
 **STILL POPULATING**
 
 KConfig Stuff
-#############
+=============
 **STILL POPULATING**
 
 Return Codes
-############
+============
 This part will discuss what the possible return codes actually mean (thanks for the lack of documentation ZEPHYR)
 
 * -EIO (-5)
