@@ -31,8 +31,8 @@ export SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct)
 ##############
  
 # build our documentation with sphinx (see docs/conf.py)
-make -C docs clean
-make -C docs html
+#make -C docs clean
+#make -C docs html
  
 #######################
 # Update GitHub Pages #
@@ -47,9 +47,20 @@ rsync -av "docs/_build/html/" "${docroot}/"
 pushd "${docroot}"
  
 # don't bother maintaining history; just generate fresh
-git init
-git remote add deploy "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-git checkout -b gh-pages-pull
+#git init
+#git remote add deploy "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+git clone "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+git checkout -b gh-pages-pull gh-pages
+
+rm -r !(".git"|".git/*")
+
+popd
+
+# Build the DOCS
+make -C docs clean
+make -C docs html
+
+pushd "${docroot}"
  
 # add .nojekyll to the root so that github won't 404 on content added to dirs
 # that start with an underscore (_), such as our "_content" dir..
