@@ -52,7 +52,8 @@ pushd "${docroot}"
 git clone "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 git checkout -b gh-pages-pull gh-pages
 
-rm -r !(".git"|".git/*")
+#shopt -s extglob
+#rm -- !(".git"|".git/*")
 
 popd
 
