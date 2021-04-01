@@ -2,14 +2,13 @@
 ################################################################################
 # File:    buildDocs.sh
 # Purpose: Script that builds our documentation using sphinx and updates GitHub
-#          Pages. This script is executed by:
-#            .github/workflows/docs_pages_workflow.yml
+#          Pages.
 #
-# Authors: Michael Altfield <michael@michaelaltfield.net>
+# Original Author: Michael Atlfield <michael@michaelaltfield.net>
+# Modified: awkwardMathNerd
 # Created: 2020-07-17
-# Updated: 2020-07-17
+# Updated: 2021-04-01
 # Version: 0.1
-# THANKS MICHAEL
 ################################################################################
  
 ###################
@@ -32,7 +31,6 @@ export SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct)
 ##############
  
 # build our documentation with sphinx (see docs/conf.py)
-# * https://www.sphinx-doc.org/en/master/usage/quickstart.html#running-the-build
 make -C docs clean
 make -C docs html
  
@@ -62,13 +60,8 @@ cat > README.md <<EOF
 # GitHub Pages Cache
  
 Nothing to see here. The contents of this branch are essentially a cache that's not intended to be viewed on github.com.
- 
- 
-If you're looking to update our documentation, check the relevant development branch's 'docs/' dir.
- 
-For more information on how this documentation is built using Sphinx, Read the Docs, and GitHub Actions/Pages, see:
- 
- * https://tech.michaelaltfield.net/2020/07/18/sphinx-rtd-github-pages-1
+
+DO NOT commit ANYTHING to this branch, it is automatically done when a commit is pulled into 'master'
 EOF
  
 # copy the resulting html pages built from sphinx above to our new git repo
