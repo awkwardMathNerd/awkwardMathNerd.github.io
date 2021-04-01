@@ -47,6 +47,7 @@ rsync -av "docs/_build/html/" "${docroot}/"
 pushd "${docroot}"
  
 # don't bother maintaining history; just generate fresh
+<<<<<<< HEAD
 #git init
 #git remote add deploy "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 git clone "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
@@ -62,6 +63,14 @@ make -C docs clean
 make -C docs html
 
 pushd "${docroot}"
+=======
+git init
+git remote add deploy "https://token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+git checkout -b gh-pages
+
+# Branch into gh-pages-pull
+git branch gh-pages-pull
+>>>>>>> parent of 33cc4da (Update buildDocs.sh)
  
 # add .nojekyll to the root so that github won't 404 on content added to dirs
 # that start with an underscore (_), such as our "_content" dir..
