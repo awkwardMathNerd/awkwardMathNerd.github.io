@@ -26,6 +26,10 @@ Slave Mode
 ##########
 **STILL POPULATING**
 
+KConfig Stuff
+#############
+**STILL POPULATING**
+
 Return Codes
 ############
 This part will discuss what the possible return codes actually mean (thanks for the lack of documentation ZEPHYR)
