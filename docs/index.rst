@@ -13,6 +13,7 @@ This site will be used to document how to use specific parts of the Zephyr RTOS.
    :maxdepth: 5
    :titlesonly:
 
+   issues
    particle_argon/index
    disco_l475_iot1/index
    general/index
