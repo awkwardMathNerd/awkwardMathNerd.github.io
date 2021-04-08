@@ -3,3 +3,5 @@
 \doctrees
 __pycache__
 *.pyc
+*.code-workspace
+.vscode
