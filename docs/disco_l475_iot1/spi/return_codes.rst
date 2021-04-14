@@ -13,13 +13,13 @@ This part will discuss what the possible return codes actually mean (thanks for 
     To get the actual error code from the STM32 SPI peripheral you will need to enable logging ``CONFIG_LOG=y`` in your ``prj.conf`` file,
     this is since instead of returning the actual result zephyr feels the need to hide it, and log it instead.
 
-    .. image:: //_static/disco_l475_iot1/spi/get_err.png
+    .. image:: /images/disco_l475_iot1/spi/get_err.png
         :width: 50%
     
     This code snippet is found in ``zephyr/drivers/spi/spi_ll_stm32.c``. Once you get this value from the LOG output you will be able to
     compare it to the ``SR`` register definition for your STM32 device. For the STM32L475VG the ``SR`` registers contents are as follows
 
-    .. image:: //_static/disco_l475_iot1/spi/sr_reg.png
+    .. image:: /images/disco_l475_iot1/spi/sr_reg.png
         :width: 100%
 
     At the time of writing ``SPI_STM32_ERR_MSK`` for the STM32L475VG causes only ``FRE``, ``OVR``, ``MODF`` and ``CRCERR`` to be parsed,
