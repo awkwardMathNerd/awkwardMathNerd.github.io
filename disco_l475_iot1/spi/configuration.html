@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Configuration &mdash; Zephyr Driver Documentation 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/blue_highlight.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Frequency Selection" href="frequency_selection.html" />
+    <link rel="prev" title="SPI" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Zephyr Driver Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../issues.html">Issue Reporting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../particle_argon/index.html">Particle Argon</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Disco L475 IOT1</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">SPI</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Configuration</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="frequency_selection.html">Frequency Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kconfig.html">KConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="return_codes.html">Return Codes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="slave_mode.html">Slave mode</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../change_main_clock.html">Change Main Clock</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/index.html">General</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Zephyr Driver Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Disco L475 IOT1</a> &raquo;</li>
+        
+          <li><a href="index.html">SPI</a> &raquo;</li>
+        
+      <li>Configuration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>This section contains all the different configuration options you can use with the STM32 SPI interface through the <code class="docutils literal notranslate"><span class="pre">spi_config.operation</span></code> field</p>
+<dl class="glossary simple">
+<dt id="term-SPI_OP_MODE_MASTER">SPI_OP_MODE_MASTER<a class="headerlink" href="#term-SPI_OP_MODE_MASTER" title="Permalink to this term">¶</a></dt><dd><p>Sets the operational mode to MASTER</p>
+</dd>
+<dt id="term-SPI_OP_MODE_SLAVE">SPI_OP_MODE_SLAVE<a class="headerlink" href="#term-SPI_OP_MODE_SLAVE" title="Permalink to this term">¶</a></dt><dd><p>Sets the operational mode to SLAVE</p>
+</dd>
+<dt id="term-SPI_MODE_CPOL">SPI_MODE_CPOL<a class="headerlink" href="#term-SPI_MODE_CPOL" title="Permalink to this term">¶</a></dt><dd><p>Sets the clock polarity. If this is selected then the SCK idle state will be 1 with its active state being 0. If this is not selected then
+the opposite will be true</p>
+</dd>
+<dt id="term-SPI_MODE_CPHA">SPI_MODE_CPHA<a class="headerlink" href="#term-SPI_MODE_CPHA" title="Permalink to this term">¶</a></dt><dd><p>Sets the clock phase. IF <a class="reference internal" href="#term-SPI_MODE_CPOL"><span class="xref std std-term">SPI_MODE_CPOL</span></a> is selected then, if this mode is selected then capturing of the data will occur on LOW to HIGH
+transition, and if this mode and not selected then capturing occurs on a HIGH to LOW transition. If <a class="reference internal" href="#term-SPI_MODE_CPOL"><span class="xref std std-term">SPI_MODE_CPOL</span></a> is NOT selected then
+this behaviour is reversed.</p>
+</dd>
+<dt id="term-SPI_MODE_LOOP">SPI_MODE_LOOP<a class="headerlink" href="#term-SPI_MODE_LOOP" title="Permalink to this term">¶</a></dt><dd><p>This mode is IGNORED by the STM32 driver (even though if logging is enabled <code class="docutils literal notranslate"><span class="pre">CONFIG_LOG=y</span></code> it will output that this option is set)</p>
+</dd>
+<dt id="term-SPI_TRANSFER_MSB">SPI_TRANSFER_MSB<a class="headerlink" href="#term-SPI_TRANSFER_MSB" title="Permalink to this term">¶</a></dt><dd><p>This will make each word (8 or 16 bit) transmit with the MSBit first</p>
+</dd>
+<dt id="term-SPI_TRANSFER_LSB">SPI_TRANSFER_LSB<a class="headerlink" href="#term-SPI_TRANSFER_LSB" title="Permalink to this term">¶</a></dt><dd><p>This will make each word (8 or 16 bit) transmit with the LSBit first</p>
+</dd>
+<dt id="term-SPI_WORD_SET-_word_size_">SPI_WORD_SET(_word_size_)<a class="headerlink" href="#term-SPI_WORD_SET-_word_size_" title="Permalink to this term">¶</a></dt><dd><p>This macro can be used to set the word size that is transmitted. If 8 is chosen then 8 bits is used, any other value results in 16 bit words</p>
+</dd>
+<dt id="term-SPI_LINES_SINGLE">SPI_LINES_SINGLE<a class="headerlink" href="#term-SPI_LINES_SINGLE" title="Permalink to this term">¶</a></dt><dd><p>To current knowledge this is not used by the  STM32 SPI driver, since there is a seperate QSPI driver. The SPI driver defaults to single line.</p>
+</dd>
+<dt id="term-SPI_LINES_DUAL">SPI_LINES_DUAL<a class="headerlink" href="#term-SPI_LINES_DUAL" title="Permalink to this term">¶</a></dt><dd><p>See <a class="reference internal" href="#term-SPI_LINES_SINGLE"><span class="xref std std-term">SPI_LINES_SINGLE</span></a></p>
+</dd>
+<dt id="term-SPI_LINES_QUAD">SPI_LINES_QUAD<a class="headerlink" href="#term-SPI_LINES_QUAD" title="Permalink to this term">¶</a></dt><dd><p>See <a class="reference internal" href="#term-SPI_LINES_SINGLE"><span class="xref std std-term">SPI_LINES_SINGLE</span></a></p>
+</dd>
+<dt id="term-SPI_LINES_OCTAL">SPI_LINES_OCTAL<a class="headerlink" href="#term-SPI_LINES_OCTAL" title="Permalink to this term">¶</a></dt><dd><p>See <a class="reference internal" href="#term-SPI_LINES_SINGLE"><span class="xref std std-term">SPI_LINES_SINGLE</span></a></p>
+</dd>
+<dt id="term-SPI_HOLD_ON_CS">SPI_HOLD_ON_CS<a class="headerlink" href="#term-SPI_HOLD_ON_CS" title="Permalink to this term">¶</a></dt><dd><p>To current knowledge when in MASTER this configuration will cause the CS pin to permanentaly remain asserted even with consecutive write/read operations
+because the STM32 SPI driver never calls <code class="docutils literal notranslate"><span class="pre">spi_context_unlock_unconditionally</span></code>.</p>
+</dd>
+<dt id="term-SPI_LOCK_ON">SPI_LOCK_ON<a class="headerlink" href="#term-SPI_LOCK_ON" title="Permalink to this term">¶</a></dt><dd><p>Only allows specific configuration structs to use the driver (in my opinion a fucking stupid option, and doesn’t lend much to good programming practises)</p>
+</dd>
+<dt id="term-SPI_CS_ACTIVE_HIGH">SPI_CS_ACTIVE_HIGH<a class="headerlink" href="#term-SPI_CS_ACTIVE_HIGH" title="Permalink to this term">¶</a></dt><dd><p>I honestly have nothing good to say about this useless fuck nuckle. If I have missed a useful piece of code in the driver for it, I don’t apologise.
+I say this because it seems its only purpose is to check against the <code class="docutils literal notranslate"><span class="pre">spi_cs_cntrl.gpio_dt_flags</span></code> and make sure its the same (CS_ACTIVE_HIGH -&gt; GPIO_ACTIVE_HIGH
+and vice versa) in an assert statement that does nothing unless you enable asserts. On top of this, the STM32 SPI driver completely ignores it, and if a CS pin is
+defined in the <code class="docutils literal notranslate"><span class="pre">spi_config.cs</span></code> then it forces the CS pin HIGH when operations are underway, and forces the CS pin LOW when operations are concluded (so just ignores
+the configuration completely), and heres the kicker the assertion of the CS line happens NO MATTER IF ITS IN SLAVE OR MASTER MODE, fucking useless thing.</p>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="frequency_selection.html" class="btn btn-neutral float-right" title="Frequency Selection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="SPI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, awkwardMathNerd.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
